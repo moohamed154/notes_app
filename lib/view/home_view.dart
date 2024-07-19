@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/notes_view_body.dart';
 
 class NotesVeiw extends StatelessWidget {
   const NotesVeiw({super.key});
@@ -7,6 +8,11 @@ class NotesVeiw extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: const NotesViewBody(),
+    );
   }
 }
+
+
+
