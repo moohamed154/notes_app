@@ -13,6 +13,7 @@ class NotesVeiw extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: kPrimaryColor,
+        foregroundColor: Colors.black,
         onPressed: () {
           showModalBottomSheet(
               shape: RoundedRectangleBorder(
