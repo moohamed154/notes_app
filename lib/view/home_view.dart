@@ -16,14 +16,15 @@ class NotesVeiw extends StatelessWidget {
         foregroundColor: Colors.black,
         onPressed: () {
           showModalBottomSheet(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                16,
-              )),
-              context: context,
-              builder: (context) {
-                return const AddNoteBottomSheet();
-              });
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+              16,
+            )),
+            context: context,
+            builder: (context) {
+              return const AddNoteBottomSheet();
+            },
+          );
         },
         child: const Icon(
           Icons.add,
