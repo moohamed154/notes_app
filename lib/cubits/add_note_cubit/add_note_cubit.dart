@@ -1,15 +1,8 @@
-part of 'add_note_cubit.dart';
+import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
 
-sealed class AddNoteState {}
+part 'add_note_state.dart';
 
-final class AddNoteInitial extends AddNoteState {}
-
-final class AddNoteLoading extends AddNoteState {}
-
-final class AddNoteSucces extends AddNoteState {}
-
-final class AddNoteFailure extends AddNoteState {
-  final String errMessage;
-
-  AddNoteFailure(this.errMessage);
+class AddNoteCubit extends Cubit<AddNoteState> {
+  AddNoteCubit() : super(AddNoteInitial());
 }
