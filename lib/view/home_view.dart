@@ -16,6 +16,7 @@ class NotesVeiw extends StatelessWidget {
         foregroundColor: Colors.black,
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(
               16,
