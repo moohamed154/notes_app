@@ -40,7 +40,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
       child: Column(
         children: [
           const SizedBox(
-            height: 32,
+            height: 38,
           ),
           CustomTextField(
             onSaved: (value) {
@@ -49,7 +49,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hintText: 'Title',
           ),
           const SizedBox(
-            height: 16,
+            height: 32,
           ),
           CustomTextField(
             onSaved: (value) {
@@ -59,7 +59,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLines: 5,
           ),
           const SizedBox(
-            height: 32,
+            height: 50,
           ),
           CustomButton(
             onTap: () {
