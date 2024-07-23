@@ -5,6 +5,7 @@ import 'package:notes_app/helper/show_snack_bar.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/custom_appbar.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
+import 'package:notes_app/widgets/edit_note_colors_list_view.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({super.key, required this.note});
@@ -60,6 +61,12 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             },
             hintText: widget.note.subtitle,
             maxLines: 5,
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          EditNotesColorsList(
+            note: widget.note,
           ),
         ],
       ),

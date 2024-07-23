@@ -18,6 +18,7 @@ class NotesListView extends StatelessWidget {
             vertical: 16,
           ),
           child: ListView.builder(
+              reverse: true,
               itemCount: notes.length,
               padding: EdgeInsets.zero,
               itemBuilder: (context, index) {
