@@ -13,8 +13,7 @@ class NotesListView extends StatelessWidget {
     return BlocBuilder<NotesCubit, NotesState>(
       builder: (context, state) {
         // Fetch notes from the NotesCubit
-        List<NoteModel> notes =
-            BlocProvider.of<NotesCubit>(context).notes ?? [];
+        List<NoteModel> notes = BlocProvider.of<NotesCubit>(context).notes!;
 
         // Reverse the list to show the latest notes on top
         final reversedNotes = notes.reversed.toList();
