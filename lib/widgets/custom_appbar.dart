@@ -19,11 +19,11 @@ class CustomAppBar extends StatelessWidget {
             fontSize: 28,
           ),
         ),
-        const Spacer(),
-        CustomSearchIcon(
-          onPressed: onPressed,
-          icon: icon,
-        ),
+        // const Spacer(),
+        // CustomSearchIcon(
+        //   onPressed: onPressed,
+        //   icon: icon,
+        // ),
       ],
     );
   }
