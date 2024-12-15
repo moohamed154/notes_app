@@ -29,16 +29,25 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
           ),
           CustomAppBar(
             onPressed: () {
-              widget.note.title = title ?? widget.note.title;
-              widget.note.subtitle = content ?? widget.note.subtitle;
-              widget.note.save();
-              BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-              showSnackBar(
-                context,
-                'Note Edited',
-                Colors.green,
-              );
-              Navigator.pop(context);
+              if (title == null && content == null) {
+                showSnackBar(
+                  context,
+                  'No changes made',
+                  Colors.red,
+                );
+                return;
+              } else {
+                widget.note.title = title ?? widget.note.title;
+                widget.note.subtitle = content ?? widget.note.subtitle;
+                widget.note.save();
+                BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+                showSnackBar(
+                  context,
+                  'Note Edited',
+                  Colors.green,
+                );
+                Navigator.pop(context);
+              }
             },
             title: 'Edit Note',
             icon: Icons.check,

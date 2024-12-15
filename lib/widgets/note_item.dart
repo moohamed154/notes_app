@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
+import 'package:notes_app/helper/show_snack_bar.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/view/edit_note_view.dart';
 
@@ -52,7 +53,7 @@ class NotesItem extends StatelessWidget {
                 child: Text(
                   note.subtitle,
                   style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.black.withAlpha(128),
                     fontSize: 18,
                   ),
                 ),
@@ -60,7 +61,11 @@ class NotesItem extends StatelessWidget {
               trailing: IconButton(
                 onPressed: () {
                   note.delete();
-
+                  showSnackBar(
+                    context,
+                    'Note Deleted Successfully',
+                    Colors.red,
+                  );
                   BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                 },
                 icon: const Icon(
@@ -77,7 +82,7 @@ class NotesItem extends StatelessWidget {
               child: Text(
                 note.date,
                 style: TextStyle(
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withAlpha(128),
                   fontSize: 16,
                 ),
               ),
